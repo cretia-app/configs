@@ -1,0 +1,44 @@
+{
+  "name": "eslint-config-teia",
+  "version": "0.0.5",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "files": [
+    "index.js"
+  ],
+  "keywords": [
+    "eslint",
+    "config",
+    "typescript",
+    "teia"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/teia-tech/eslint-config-teia.git"
+  },
+  "author": "cesargdm",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/teia-tech/eslint-config-teia/issues"
+  },
+  "homepage": "https://github.com/teia-tech/eslint-config-teia#readme",
+  "devDependencies": {
+    "prettier": "^2.2.1"
+  },
+  "eslintConfig": {
+    "extends": "./index.js"
+  },
+  "dependencies": {
+    "@typescript-eslint/eslint-plugin": "^4.22.0",
+    "@typescript-eslint/parser": "^4.22.0",
+    "eslint": "^7.25.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-react": "^7.23.2",
+    "eslint-plugin-react-hooks": "^4.2.0"
+  }
+}
