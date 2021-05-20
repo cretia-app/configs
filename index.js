@@ -25,13 +25,13 @@ module.exports = {
   ignorePatterns: 'src/generated/graphql.tsx',
   rules: {
     '@typescript-eslint/no-explicit-any': 'off',
-    '@typescript-eslint/no-unused-vars': 'error',
+    '@typescript-eslint/no-unused-vars': 'warn',
 
     'max-lines': ['warn', { max: 500, skipBlankLines: true }],
     'max-params': ['warn', MAX_PARAMS],
     'no-console': 'warn',
     'no-magic-numbers': ['warn', { ignoreArrayIndexes: true }],
-    'no-unused-expressions': 'error',
+    'no-unused-expressions': 'warn',
     'no-useless-return': 'error',
     'prefer-const': 'error',
     'prefer-destructuring': 'warn',
