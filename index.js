@@ -21,6 +21,7 @@ module.exports = {
 
     'plugin:import/errors',
     'plugin:import/warnings',
+    'plugin:import/typescript',
   ],
   ignorePatterns: 'src/generated/graphql.tsx',
   rules: {
@@ -30,7 +31,12 @@ module.exports = {
     'max-lines': ['warn', { max: 500, skipBlankLines: true }],
     'max-params': ['warn', MAX_PARAMS],
     'no-console': 'warn',
-    'no-magic-numbers': ['warn', { ignoreArrayIndexes: true }],
+
+    'no-magic-numbers': [
+      'warn',
+      { ignoreArrayIndexes: true, ignore: [-1, 0, 1] },
+    ],
+
     'no-unused-expressions': 'warn',
     'no-useless-return': 'error',
     'prefer-const': 'error',
