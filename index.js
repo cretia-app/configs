@@ -3,7 +3,16 @@ const MAX_PARAMS = 3
 module.exports = {
   root: true,
   parser: '@typescript-eslint/parser',
-  plugins: ['@typescript-eslint', 'jsx-a11y', 'import', 'react-hooks', 'react'],
+  plugins: [
+    '@typescript-eslint',
+    'jsx-a11y',
+    'import',
+
+    'react-hooks',
+    'react',
+
+    'security',
+  ],
   env: {
     es6: true,
     node: true,
@@ -22,6 +31,8 @@ module.exports = {
     'plugin:import/errors',
     'plugin:import/warnings',
     'plugin:import/typescript',
+
+    'plugin:security/recommended',
   ],
   ignorePatterns: 'src/generated/graphql.tsx',
   rules: {
