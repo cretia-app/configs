@@ -38,10 +38,10 @@
     "@typescript-eslint/parser": "5.x",
     "eslint": "8.x",
     "eslint-config-prettier": "8.x",
+    "eslint-plugin-compat": "4.x",
     "eslint-plugin-import": "2.x",
     "eslint-plugin-jsx-a11y": "6.x",
     "eslint-plugin-react": "7.x",
-    "eslint-plugin-react-hooks": "4.x",
-    "eslint-plugin-security": "1.x"
+    "eslint-plugin-react-hooks": "4.x"
   }
 }

@@ -3,16 +3,7 @@ const MAX_PARAMS = 3
 module.exports = {
   root: true,
   parser: '@typescript-eslint/parser',
-  plugins: [
-    '@typescript-eslint',
-    'jsx-a11y',
-    'import',
-
-    'react-hooks',
-    'react',
-
-    'security',
-  ],
+  plugins: ['@typescript-eslint', 'jsx-a11y', 'import', 'react-hooks', 'react'],
   env: {
     es6: true,
     node: true,
@@ -26,19 +17,19 @@ module.exports = {
     'prettier',
 
     'plugin:react/recommended',
+
+    'plugin:react-hooks/recommended',
+
     'plugin:jsx-a11y/strict',
 
     'plugin:import/errors',
     'plugin:import/warnings',
     'plugin:import/typescript',
 
-    'plugin:security/recommended',
+    'plugin:compat/recommended',
   ],
   ignorePatterns: 'src/generated/graphql.tsx',
   rules: {
-    '@typescript-eslint/no-explicit-any': 'off',
-    '@typescript-eslint/no-unused-vars': 'warn',
-
     'max-lines': ['warn', { max: 500, skipBlankLines: true }],
     'max-params': ['warn', MAX_PARAMS],
     'no-console': 'warn',
@@ -55,6 +46,9 @@ module.exports = {
     'prefer-spread': 'warn',
     'require-await': 'error',
     'no-unused-vars': 'off',
+
+    '@typescript-eslint/no-explicit-any': 'off',
+    '@typescript-eslint/no-unused-vars': 'warn',
 
     'react/react-in-jsx-scope': 'off',
 
