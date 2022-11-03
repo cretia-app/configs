@@ -53,7 +53,7 @@ module.exports = {
 
 		// React
 		'react/react-in-jsx-scope': 'off',
-		'react/jsx-no-leaked-render': 'warning',
+		'react/jsx-no-leaked-render': 'warn',
 
 		// Import order
 		'import/order': [
