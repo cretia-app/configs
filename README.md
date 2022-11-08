@@ -1,1 +1,3 @@
-# eslint-config-teia
+# ESLint configuration by Cretia
+
+Extends `eslint:recommended`
