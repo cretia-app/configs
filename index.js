@@ -22,8 +22,7 @@ module.exports = {
 
 		'plugin:jsx-a11y/strict',
 
-		'plugin:import/errors',
-		'plugin:import/warnings',
+		'plugin:import/recommended',
 		'plugin:import/typescript',
 
 		'plugin:compat/recommended',
@@ -75,6 +74,10 @@ module.exports = {
 	settings: {
 		react: { version: 'detect' },
 		'import/resolver': {
+			alias: {
+				extensions: ['.(t|j)sx?', 'json'],
+				map: [['@', './src']],
+			},
 			node: {
 				extensions: ['.js', '.jsx', '.ts', '.tsx'],
 				moduleDirectory: ['node_modules', 'src'],
