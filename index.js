@@ -1,7 +1,6 @@
 const MAX_PARAMS = 3
 
 module.exports = {
-	root: true,
 	parser: '@typescript-eslint/parser',
 	plugins: ['@typescript-eslint', 'jsx-a11y', 'import', 'react-hooks', 'react'],
 	env: {
@@ -10,6 +9,7 @@ module.exports = {
 		jest: true,
 		browser: true,
 	},
+	ignorePatterns: 'src/generated/*',
 	extends: [
 		'eslint:recommended',
 		'plugin:@typescript-eslint/recommended',
@@ -17,7 +17,6 @@ module.exports = {
 		'prettier',
 
 		'plugin:react/recommended',
-
 		'plugin:react-hooks/recommended',
 
 		'plugin:jsx-a11y/strict',
@@ -27,17 +26,18 @@ module.exports = {
 
 		'plugin:compat/recommended',
 	],
-	ignorePatterns: 'src/generated/graphql.tsx',
 	rules: {
 		'max-lines': ['warn', { max: 500, skipBlankLines: true }],
 		'max-params': ['warn', MAX_PARAMS],
 		'no-console': 'warn',
+		'no-redeclare': 'warn',
 
 		'no-magic-numbers': [
 			'warn',
 			{ ignoreArrayIndexes: true, ignore: [-1, 0, 1] },
 		],
 
+		'no-else-return': 'warn',
 		'no-unused-expressions': 'warn',
 		'no-useless-return': 'error',
 		'prefer-const': 'error',
@@ -53,6 +53,16 @@ module.exports = {
 		// React
 		'react/react-in-jsx-scope': 'off',
 		'react/jsx-no-leaked-render': 'warn',
+		'react/jsx-no-useless-fragment': 'warn',
+		'react/jsx-boolean-value': ['warn', 'never'],
+		'react/jsx-sort-props': [
+			'warn',
+			{
+				shorthandLast: true,
+				reservedFirst: true,
+				noSortAlphabetically: true,
+			},
+		],
 
 		// Import order
 		'import/order': [
@@ -74,6 +84,7 @@ module.exports = {
 	settings: {
 		react: { version: 'detect' },
 		'import/resolver': {
+			typescript: true,
 			alias: {
 				extensions: ['.(t|j)sx?', 'json'],
 				map: [['@', './src']],
