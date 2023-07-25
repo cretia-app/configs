@@ -2,7 +2,13 @@ const MAX_PARAMS = 3
 
 module.exports = {
 	parser: '@typescript-eslint/parser',
-	plugins: ['@typescript-eslint', 'jsx-a11y', 'import', 'react-hooks', 'react'],
+	plugins: [
+		'@typescript-eslint/eslint-plugin',
+		'react',
+		'import',
+		'jsx-a11y',
+		'react-hooks',
+	],
 	env: {
 		es6: true,
 		node: true,
@@ -11,16 +17,21 @@ module.exports = {
 	},
 	ignorePatterns: 'src/generated/*',
 	extends: [
+		// Recommended general
 		'eslint:recommended',
 		'plugin:@typescript-eslint/recommended',
 
+		// Prettier-compatible
 		'prettier',
 
+		// React rules
 		'plugin:react/recommended',
 		'plugin:react-hooks/recommended',
 
+		// Accessibility
 		'plugin:jsx-a11y/strict',
 
+		// Imports
 		'plugin:import/recommended',
 		'plugin:import/typescript',
 
@@ -31,12 +42,10 @@ module.exports = {
 		'max-params': ['warn', MAX_PARAMS],
 		'no-console': 'warn',
 		'no-redeclare': 'warn',
-
 		'no-magic-numbers': [
 			'warn',
 			{ ignoreArrayIndexes: true, ignore: [-1, 0, 1] },
 		],
-
 		'no-else-return': 'warn',
 		'no-unused-expressions': 'warn',
 		'no-useless-return': 'error',
