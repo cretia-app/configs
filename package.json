@@ -1,6 +1,6 @@
 {
 	"name": "eslint-config-cretia",
-	"version": "0.4.9",
+	"version": "0.4.13",
 	"description": "",
 	"main": "index.js",
 	"scripts": {
@@ -37,11 +37,9 @@
 		"@typescript-eslint/parser": "5.x",
 		"eslint": "8.x",
 		"eslint-config-prettier": "8.x",
-		"eslint-import-resolver-alias": "1.x",
-		"eslint-import-resolver-typescript": "2.x",
-		"eslint-plugin-import": "2.x",
 		"eslint-plugin-jsx-a11y": "6.x",
 		"eslint-plugin-react": "7.x",
-		"eslint-plugin-react-hooks": "4.x"
+		"eslint-plugin-react-hooks": "4.x",
+		"eslint-plugin-simple-import-sort": "10.x"
 	}
 }

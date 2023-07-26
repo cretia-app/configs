@@ -5,9 +5,9 @@ module.exports = {
 	plugins: [
 		'@typescript-eslint/eslint-plugin',
 		'react',
-		// 'import',
 		'jsx-a11y',
 		'react-hooks',
+		'simple-import-sort',
 	],
 	env: {
 		es6: true,
@@ -30,10 +30,6 @@ module.exports = {
 
 		// Accessibility
 		'plugin:jsx-a11y/strict',
-
-		// Imports
-		// 'plugin:import/recommended',
-		// 'plugin:import/typescript',
 	],
 	rules: {
 		'max-lines': ['warn', { max: 500, skipBlankLines: true }],
@@ -71,44 +67,27 @@ module.exports = {
 			},
 		],
 
-		// Import order
-		// 'import/order': [
-		// 	'warn',
-		// 	{
-		// 		pathGroups: [
-		// 			{
-		// 				pattern: '@/**',
-		// 				group: 'external',
-		// 			},
-		// 		],
-		// 		groups: [
-		// 			'builtin',
-		// 			'external',
-		// 			'internal',
-		// 			'parent',
-		// 			'sibling',
-		// 			'index',
-		// 		],
-		// 		'newlines-between': 'always-and-inside-groups',
-		// 	},
-		// ],
-		// 'import/exports-last': 'warn',
+		'simple-import-sort/imports': [
+			'warn',
+			{
+				groups: [
+					// Packages `node` or `react` related packages come first.
+					['^node:', '^react', '^@?\\w'],
+					// Internal packages.
+					['^(@|components)(/.*|$)'],
+					// Side effect imports.
+					['^\\u0000'],
+					// Parent imports. Put `..` last.
+					['^\\.\\.(?!/?$)', '^\\.\\./?$'],
+					// Other relative imports. Put same-folder imports and `.` last.
+					['^\\./(?=.*/)(?!/?$)', '^\\.(?!/?$)', '^\\./?$'],
+					// Style imports.
+					['^.+\\.?(css)$'],
+				],
+			},
+		],
 	},
 	settings: {
 		react: { version: 'detect' },
-		// 'import/resolver': {
-		// 	typescript: true,
-		// 	alias: {
-		// 		extensions: ['.(t|j)sx?', 'json'],
-		// 		map: [
-		// 			['@', './src'],
-		// 			['@', './api'],
-		// 		],
-		// 	},
-		// 	node: {
-		// 		extensions: ['.(t|j)sx?', 'json'],
-		// 		moduleDirectory: ['node_modules', './src', './api'],
-		// 	},
-		// },
 	},
 }
