@@ -5,7 +5,7 @@ module.exports = {
 	plugins: [
 		'@typescript-eslint/eslint-plugin',
 		'react',
-		'import',
+		// 'import',
 		'jsx-a11y',
 		'react-hooks',
 	],
@@ -32,10 +32,8 @@ module.exports = {
 		'plugin:jsx-a11y/strict',
 
 		// Imports
-		'plugin:import/recommended',
-		'plugin:import/typescript',
-
-		'plugin:compat/recommended',
+		// 'plugin:import/recommended',
+		// 'plugin:import/typescript',
 	],
 	rules: {
 		'max-lines': ['warn', { max: 500, skipBlankLines: true }],
@@ -61,8 +59,8 @@ module.exports = {
 
 		// React
 		'react/react-in-jsx-scope': 'off',
-		'react/jsx-no-leaked-render': 'warn',
-		'react/jsx-no-useless-fragment': 'warn',
+		// 'react/jsx-no-leaked-render': 'warn',
+		// 'react/jsx-no-useless-fragment': 'warn',
 		'react/jsx-boolean-value': ['warn', 'never'],
 		'react/jsx-sort-props': [
 			'warn',
@@ -74,34 +72,43 @@ module.exports = {
 		],
 
 		// Import order
-		'import/order': [
-			'warn',
-			{
-				groups: [
-					'builtin',
-					'external',
-					'internal',
-					'parent',
-					'sibling',
-					'index',
-				],
-				'newlines-between': 'always-and-inside-groups',
-			},
-		],
-		'import/exports-last': 'warn',
+		// 'import/order': [
+		// 	'warn',
+		// 	{
+		// 		pathGroups: [
+		// 			{
+		// 				pattern: '@/**',
+		// 				group: 'external',
+		// 			},
+		// 		],
+		// 		groups: [
+		// 			'builtin',
+		// 			'external',
+		// 			'internal',
+		// 			'parent',
+		// 			'sibling',
+		// 			'index',
+		// 		],
+		// 		'newlines-between': 'always-and-inside-groups',
+		// 	},
+		// ],
+		// 'import/exports-last': 'warn',
 	},
 	settings: {
 		react: { version: 'detect' },
-		'import/resolver': {
-			typescript: true,
-			alias: {
-				extensions: ['.(t|j)sx?', 'json'],
-				map: [['@', './src']],
-			},
-			node: {
-				extensions: ['.js', '.jsx', '.ts', '.tsx'],
-				moduleDirectory: ['node_modules', 'src'],
-			},
-		},
+		// 'import/resolver': {
+		// 	typescript: true,
+		// 	alias: {
+		// 		extensions: ['.(t|j)sx?', 'json'],
+		// 		map: [
+		// 			['@', './src'],
+		// 			['@', './api'],
+		// 		],
+		// 	},
+		// 	node: {
+		// 		extensions: ['.(t|j)sx?', 'json'],
+		// 		moduleDirectory: ['node_modules', './src', './api'],
+		// 	},
+		// },
 	},
 }
