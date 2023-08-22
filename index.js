@@ -52,6 +52,10 @@ module.exports = {
 		// TypeScript
 		'@typescript-eslint/no-explicit-any': 'off',
 		'@typescript-eslint/no-unused-vars': 'warn',
+		'@typescript-eslint/consistent-type-imports': [
+			'warn',
+			{ prefer: 'type-imports' },
+		],
 
 		// React
 		'react/react-in-jsx-scope': 'off',
@@ -72,9 +76,13 @@ module.exports = {
 			{
 				groups: [
 					// Packages `node` or `react` related packages come first.
-					['^node:', '^react', '^@?\\w'],
+					['^node:', '^react-?(dom|native)?$', '^@?\\w'],
 					// Internal packages.
-					['^(@|components)(/.*|$)'],
+					['^@/(screens|navigation|containers)(/.*|$)'],
+					['^@/modules(/.*|$)'],
+					['^@/components(/.*|$)'],
+					['^@/(lib|utils)(/.*|$)'],
+					['^@(/.*|$)'],
 					// Side effect imports.
 					['^\\u0000'],
 					// Parent imports. Put `..` last.
