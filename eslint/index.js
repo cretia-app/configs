@@ -82,7 +82,7 @@ module.exports = {
 					['^@/modules(/.*|$)'],
 					['^@/components(/.*|$)'],
 					['^@/(lib|utils)(/.*|$)'],
-					['^@(/.*|$)'],
+					['^@/(.*|$)'],
 					// Side effect imports.
 					['^\\u0000'],
 					// Parent imports. Put `..` last.
