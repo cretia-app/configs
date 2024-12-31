@@ -1,0 +1,40 @@
+{
+	"name": "@cretia/tsconfig",
+	"version": "1.0.0-alpha.1",
+	"private": false,
+	"keywords": [
+		"tsconfig",
+		"typescript",
+		"config",
+		"cretia"
+	],
+	"homepage": "https://github.com/cretia-app/configs#readme",
+	"bugs": {
+		"url": "https://github.com/cretia-app/configs/issues"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+ssh://git@github.com/cretia-app/configs.git"
+	},
+	"license": "MIT",
+	"author": "cesargdm",
+	"type": "module",
+	"exports": {
+		".": "./tsconfig.base.json"
+	},
+	"main": "./tsconfig.base.json",
+	"files": [
+		"./tsconfig.base.json"
+	],
+	"scripts": {
+		"build": "exit 0",
+		"clean": "rm -rf node_modules",
+		"format": "prettier --write .",
+		"lint": "exit 0",
+		"test": "exit 0",
+		"typecheck": "tsc --noEmit"
+	},
+	"devDependencies": {
+		"@cretia/eslint-config": "workspace:*"
+	}
+}

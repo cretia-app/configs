@@ -1,0 +1,28 @@
+{
+	"$schema": "https://json.schemastore.org/tsconfig",
+	"display": "Cretia",
+	"compilerOptions": {
+		"allowJs": true,
+		"incremental": true,
+		"allowUnreachableCode": false,
+		"baseUrl": ".",
+		"esModuleInterop": true,
+		"isolatedModules": true,
+		"lib": ["ES2023", "DOM", "DOM.Iterable"],
+		"module": "ESNext",
+		"noImplicitAny": true,
+		"noImplicitOverride": true,
+		"noUncheckedIndexedAccess": true,
+		"noUnusedLocals": true,
+		"noUnusedParameters": true,
+		"paths": {
+			"@/*": ["./src/*"]
+		},
+		"skipLibCheck": true,
+		"strictNullChecks": true,
+		"strict": true,
+		"target": "ESNext",
+		"verbatimModuleSyntax": true
+	},
+	"exclude": ["node_modules"]
+}

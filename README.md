@@ -24,7 +24,7 @@ There are two ways to load this configuration:
 
 ```json
 {
-  "extends": "eslint-config-cretia"
+	"extends": "eslint-config-cretia"
 }
 ```
 
@@ -43,11 +43,11 @@ There are two ways to load this configuration:
 - Inside your package.json
 
 ```json
-"prettier": "prettier-config-cretia"
+"prettier": "@cretia/prettier-config"
 ```
 
-- Use a config file `prettierrc.json`
+- Use a config file `.prettierrc`
 
 ```json
-"prettier-config-cretia"
+"@cretia/prettier-config"
 ```

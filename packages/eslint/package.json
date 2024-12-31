@@ -1,0 +1,60 @@
+{
+	"name": "@cretia/eslint-config",
+	"version": "1.0.0-alpha.3",
+	"private": false,
+	"description": "Eslint configuration by Cretia",
+	"keywords": [
+		"eslint",
+		"config",
+		"typescript",
+		"cretia"
+	],
+	"homepage": "https://github.com/cretia-app/configs#readme",
+	"bugs": {
+		"url": "https://github.com/cretia-app/configs/issues"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+ssh://git@github.com/cretia-app/configs.git"
+	},
+	"license": "MIT",
+	"author": "cesargdm",
+	"type": "module",
+	"exports": {
+		".": "./index.js"
+	},
+	"main": "./index.js",
+	"types": "./index.d.ts",
+	"files": [
+		"./index.js",
+		"./index.d.ts"
+	],
+	"scripts": {
+		"build": "tsc",
+		"clean": "rm -rf node_modules index.js index.d.ts",
+		"format": "prettier --write .",
+		"lint": "eslint .",
+		"test": "exit 0",
+		"typecheck": "tsc --noEmit"
+	},
+	"dependencies": {
+		"@eslint/js": "9.x",
+		"@typescript-eslint/eslint-plugin": "8.x",
+		"@typescript-eslint/parser": "8.x",
+		"eslint": "9.x",
+		"eslint-config-prettier": "9.x",
+		"eslint-plugin-perfectionist": "4.x",
+		"eslint-plugin-react": "7.x",
+		"eslint-plugin-react-compiler": "19.0.0-beta-b2e8e9c-20241220",
+		"eslint-plugin-react-hooks": "5.x",
+		"eslint-plugin-simple-import-sort": "12.x",
+		"eslint-plugin-unicorn": "56.x",
+		"globals": "15.x",
+		"typescript-eslint": "8.x"
+	},
+	"devDependencies": {
+		"@cretia/eslint-config": "workspace:*",
+		"@cretia/tsconfig": "workspace:*",
+		"@types/node": "22.x"
+	}
+}

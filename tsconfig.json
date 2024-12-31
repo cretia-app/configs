@@ -1,0 +1,10 @@
+{
+	"extends": "@cretia/tsconfig",
+	"buildOptions": {
+		"outDir": "./dist"
+	},
+	"compilerOptions": {
+		"module": "NodeNext",
+		"moduleResolution": "nodenext"
+	}
+}

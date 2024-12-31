@@ -1,0 +1,45 @@
+{
+	"name": "@cretia/prettier-config",
+	"version": "1.0.0-alpha.0",
+	"private": false,
+	"description": "Prettier configuration by Cretia",
+	"keywords": [
+		"prettier",
+		"prettier-config",
+		"cretia",
+		"javascript"
+	],
+	"homepage": "https://github.com/cretia-app/configs#readme",
+	"bugs": {
+		"url": "https://github.com/cretia-app/configs/issues"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+ssh://git@github.com/cretia-app/configs.git"
+	},
+	"license": "MIT",
+	"author": "cesargdm",
+	"type": "module",
+	"exports": {
+		".": "./config.json"
+	},
+	"main": "./config.json",
+	"files": [
+		"config.json"
+	],
+	"scripts": {
+		"build": "exit 0",
+		"clean": "rm -rf node_modules",
+		"format": "prettier --write .",
+		"lint": "exit 0",
+		"test": "exit 0",
+		"typecheck": "exit 0"
+	},
+	"prettier": "./config.json",
+	"dependencies": {
+		"prettier": "3.x"
+	},
+	"devDependencies": {
+		"@cretia/tsconfig": "workspace:*"
+	}
+}

@@ -1,0 +1,10 @@
+{
+	"extends": "@cretia/tsconfig",
+	"compilerOptions": {
+		"module": "NodeNext",
+		"moduleResolution": "nodenext",
+		"declaration": true
+	},
+	"include": ["./.d.ts", "./index.ts"],
+	"exclude": ["node_modules", "./index.d.ts", "./index.js"]
+}

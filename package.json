@@ -1,0 +1,40 @@
+{
+	"name": "@cretia/configs",
+	"private": true,
+	"workspaces": [
+		"packages/*"
+	],
+	"scripts": {
+		"clean:eslint": "cd packages/eslint && npm run clean",
+		"clean:prettier": "cd packages/prettier && npm run clean",
+		"clean:tsconfig": "cd packages/ts && npm run clean",
+		"clean:root": "rm -rf node_modules",
+		"clean": "run-p clean:**",
+		"build:eslint": "cd packages/eslint && npm run build",
+		"build:prettier": "cd packages/prettier && npm run build",
+		"build:tsconfig": "cd packages/ts && npm run build",
+		"build": "run-p build:**",
+		"format:eslint": "cd packages/eslint && npm run format",
+		"format:prettier": "cd packages/prettier && npm run format",
+		"format:tsconfig": "cd packages/ts && npm run format",
+		"format": "run-p format:**",
+		"lint:eslint": "cd packages/eslint && npm run lint",
+		"lint:prettier": "cd packages/prettier && npm run lint",
+		"lint:tsconfig": "cd packages/ts && npm run lint",
+		"lint": "run-p lint:**",
+		"typecheck": "run-p typecheck:**",
+		"typecheck:eslint": "cd packages/eslint && npm run typecheck",
+		"typecheck:prettier": "cd packages/prettier && npm run typecheck",
+		"typecheck:tsconfig": "cd packages/ts && npm run typecheck",
+		"publish": "npm run build && run-p publish:**",
+		"publish:eslint": "cd packages/eslint && npm publish  --access public",
+		"publish:prettier": "cd packages/prettier && npm publish  --access public",
+		"publish:tsconfig": "cd packages/ts && npm publish  --access public"
+	},
+	"devDependencies": {
+		"@cretia/eslint-config": "workspace:*",
+		"@cretia/prettier-config": "workspace:*",
+		"@cretia/tsconfig": "workspace:*",
+		"npm-run-all": "^4.1.5"
+	}
+}
