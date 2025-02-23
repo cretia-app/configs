@@ -1,6 +1,6 @@
 {
 	"name": "@cretia/tsconfig",
-	"version": "1.0.0-alpha.1",
+	"version": "1.0.0-alpha.2",
 	"private": false,
 	"keywords": [
 		"tsconfig",
@@ -20,11 +20,13 @@
 	"author": "cesargdm",
 	"type": "module",
 	"exports": {
-		".": "./tsconfig.base.json"
+		".": "./tsconfig.base.json",
+		"./bun": "./tsconfig.bun.json"
 	},
 	"main": "./tsconfig.base.json",
 	"files": [
-		"./tsconfig.base.json"
+		"./tsconfig.base.json",
+		"./tsconfig.bun.json"
 	],
 	"scripts": {
 		"build": "exit 0",

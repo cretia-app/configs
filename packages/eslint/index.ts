@@ -49,6 +49,7 @@ export default tseslint.config(
 			'react-hooks': reactHooks,
 		},
 		rules: {
+			'@typescript-eslint/consistent-type-definitions': ['error', 'type'],
 			'@typescript-eslint/consistent-type-imports': [
 				'warn',
 				{ fixStyle: 'separate-type-imports', prefer: 'type-imports' },
