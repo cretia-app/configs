@@ -87,17 +87,20 @@ export default tseslint.config(
 				{
 					customGroups: {
 						type: {
-							node: ['node:*'],
+							bun: ['^bun:.+', '^bun$'],
+							node: ['^node:.+', '^node$'],
 							react: ['^react$', '^react-dom$', '^react-native$'],
 						},
 						value: {
-							node: ['node:*'],
+							bun: ['^bun:.+', '^bun$'],
+							node: ['^node:.+', '^node$'],
 							react: ['^react$', '^react-dom$', '^react-native$'],
 						},
 					},
 					environment: 'node',
 					groups: [
-						['node', 'react', 'builtin'],
+						['builtin', 'bun', 'node', 'react'],
+
 						['builtin-type'],
 
 						'external',

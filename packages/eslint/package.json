@@ -1,8 +1,8 @@
 {
 	"name": "@cretia/eslint-config",
-	"version": "1.0.0-alpha.4",
+	"version": "1.0.0-alpha.9",
 	"private": false,
-	"description": "Eslint configuration by Cretia",
+	"description": "ESLint configuration by Cretia",
 	"keywords": [
 		"eslint",
 		"config",

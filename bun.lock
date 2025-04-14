@@ -1,17 +1,17 @@
 {
-  "lockfileVersion": 0,
+  "lockfileVersion": 1,
   "workspaces": {
     "": {
       "devDependencies": {
-        "@cretia/eslint-config": "packages/eslint",
-        "@cretia/prettier-config": "packages/prettier",
-        "@cretia/tsconfig": "packages/ts",
+        "@cretia/eslint-config": "workspace:*",
+        "@cretia/prettier-config": "workspace:*",
+        "@cretia/tsconfig": "workspace:*",
         "npm-run-all": "^4.1.5",
       },
     },
     "packages/eslint": {
       "name": "@cretia/eslint-config",
-      "version": "1.0.0-alpha.0",
+      "version": "1.0.0-alpha.4",
       "dependencies": {
         "@eslint/js": "9.x",
         "@typescript-eslint/eslint-plugin": "8.x",
@@ -28,8 +28,8 @@
         "typescript-eslint": "8.x",
       },
       "devDependencies": {
-        "@cretia/eslint-config": "packages/eslint",
-        "@cretia/tsconfig": "packages/ts",
+        "@cretia/eslint-config": "workspace:*",
+        "@cretia/tsconfig": "workspace:*",
         "@types/node": "22.x",
       },
     },
@@ -40,14 +40,14 @@
         "prettier": "3.x",
       },
       "devDependencies": {
-        "@cretia/tsconfig": "packages/ts",
+        "@cretia/tsconfig": "workspace:*",
       },
     },
     "packages/ts": {
       "name": "@cretia/tsconfig",
-      "version": "1.0.0-alpha.0",
+      "version": "1.0.0-alpha.3",
       "devDependencies": {
-        "@cretia/eslint-config": "packages/eslint",
+        "@cretia/eslint-config": "workspace:*",
       },
     },
   },
@@ -100,11 +100,11 @@
 
     "@babel/types": ["@babel/types@7.26.3", "", { "dependencies": { "@babel/helper-string-parser": "^7.25.9", "@babel/helper-validator-identifier": "^7.25.9" } }, "sha512-vN5p+1kl59GVKMvTHt55NzzmYVxprfJD+ql7U9NFIfKCBkYE55LYtS+WtPlaYOyzydrKI8Nezd+aZextrd+FMA=="],
 
-    "@cretia/eslint-config": ["@cretia/eslint-config@workspace:packages/eslint", { "dependencies": { "@eslint/js": "9.x", "@typescript-eslint/eslint-plugin": "8.x", "@typescript-eslint/parser": "8.x", "eslint": "9.x", "eslint-config-prettier": "9.x", "eslint-plugin-perfectionist": "4.x", "eslint-plugin-react": "7.x", "eslint-plugin-react-compiler": "19.0.0-beta-b2e8e9c-20241220", "eslint-plugin-react-hooks": "5.x", "eslint-plugin-simple-import-sort": "12.x", "eslint-plugin-unicorn": "56.x", "globals": "15.x", "typescript-eslint": "8.x" }, "devDependencies": { "@cretia/eslint-config": "packages/eslint", "@cretia/tsconfig": "packages/ts", "@types/node": "22.x" } }],
+    "@cretia/eslint-config": ["@cretia/eslint-config@workspace:packages/eslint"],
 
-    "@cretia/prettier-config": ["@cretia/prettier-config@workspace:packages/prettier", { "dependencies": { "prettier": "3.x" }, "devDependencies": { "@cretia/tsconfig": "packages/ts" } }],
+    "@cretia/prettier-config": ["@cretia/prettier-config@workspace:packages/prettier"],
 
-    "@cretia/tsconfig": ["@cretia/tsconfig@workspace:packages/ts", { "devDependencies": { "@cretia/eslint-config": "packages/eslint" } }],
+    "@cretia/tsconfig": ["@cretia/tsconfig@workspace:packages/ts"],
 
     "@eslint-community/eslint-utils": ["@eslint-community/eslint-utils@4.4.1", "", { "dependencies": { "eslint-visitor-keys": "^3.4.3" }, "peerDependencies": { "eslint": "^6.0.0 || ^7.0.0 || >=8.0.0" } }, "sha512-s3O3waFUrMV8P/XaF/+ZTp1X9XBZW1a4B97ZnjQF2KYWaFD2A8KyFBsrsfSjEmjn3RGWAIuvlneuZm3CUK3jbA=="],
 
